@@ -7,13 +7,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@appwrite.io/pink": "^0.0.6-rc.11",
     "@remix-run/node": "^1.15.0",
     "@remix-run/react": "^1.15.0",
     "@remix-run/vercel": "^1.15.0",
     "@vercel/node": "^2.10.3",
+    "appwrite": "^11.0.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "set-cookie-parser": "^2.6.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.15.0",
@@ -21,6 +24,7 @@
     "@remix-run/serve": "^1.15.0",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
+    "@types/set-cookie-parser": "^2.4.2",
     "eslint": "^8.38.0",
     "typescript": "^4.9.5"
   },
