@@ -55,8 +55,6 @@ When contributing with static files, ensure all images are in WEBP or SVG format
 
 ## 🤖 Auto-generated documentation
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
 ## Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)

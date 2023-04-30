@@ -8,7 +8,7 @@ import {
 } from "~/AppwriteService";
 import * as setCookie from "set-cookie-parser";
 
-export async function loader(req: LoaderArgs) {
+export const action = async ({ request }: any) => {
   try {
     const response = await fetch(
       `${AppwriteEndpoint}/account/sessions/anonymous`,
@@ -71,7 +71,7 @@ export async function loader(req: LoaderArgs) {
     headers.append("Content-Type", "application/json");
 
     return new Response(JSON.stringify(json), {
-      status: 400,
+      status: 200,
       headers,
     });
   } catch (err: any) {
