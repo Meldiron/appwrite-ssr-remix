@@ -17,8 +17,6 @@ export function getCookie(cookieString: string, cookieName: string) {
   return null;
 }
 
-// TODO: Ensure it runs ONLY ssr
-// TODO: Add screenshots to docs
 export const loader = async ({ request }: any) => {
   const sessionNames = [
     "a_session_" + AppwriteProject.toLowerCase(),
@@ -30,10 +28,6 @@ export const loader = async ({ request }: any) => {
     getCookie(request.headers.get("Cookie"), sessionNames[1]) ??
     "";
   AppwriteService.setSession(hash);
-
-  console.log(request.headers);
-  console.log(request.headers.get("Cookie"));
-  console.log(hash);
 
   let account;
   try {
@@ -49,7 +43,6 @@ export const loader = async ({ request }: any) => {
 
 export default function Index() {
   const { account } = useLoaderData<typeof loader>();
-  console.log(account);
 
   const [isLoading, setLoading] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
