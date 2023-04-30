@@ -31,6 +31,10 @@ export const loader = async ({ request }: any) => {
     "";
   AppwriteService.setSession(hash);
 
+  console.log(request.headers);
+  console.log(request.headers.get("Cookie"));
+  console.log(hash);
+
   let account;
   try {
     account = await AppwriteService.getAccount();
@@ -45,6 +49,7 @@ export const loader = async ({ request }: any) => {
 
 export default function Index() {
   const { account } = useLoaderData<typeof loader>();
+  console.log(account);
 
   const [isLoading, setLoading] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
