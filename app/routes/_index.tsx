@@ -18,6 +18,7 @@ export function getCookie(cookieString: string, cookieName: string) {
 }
 
 export const loader = async ({ request }: any) => {
+  console.log("SSR start");
   const sessionNames = [
     "a_session_" + AppwriteProject.toLowerCase(),
     "a_session_" + AppwriteProject.toLowerCase() + "_legacy",
@@ -35,7 +36,10 @@ export const loader = async ({ request }: any) => {
   } catch (err) {
     account = null;
   }
+  console.log(account);
 
+
+  console.log("SSR end");
   return json({
     account,
   });
